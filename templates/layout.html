@@ -7,9 +7,7 @@
     <!-- BOOTSTRAP 4 CDN -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
     />
     <!-- CUSTOM CSS -->
     <link
@@ -26,7 +24,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
     />
     <link
       rel="shortcut icon"
@@ -66,8 +64,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="{{ url_for('calc') }}">
-              <i class="fa fa-home icon-black"></i> <strong> Inicio</strong></a
-            >
+              <i class="fa fa-home icon-black"></i> <strong> Inicio</strong></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('info') }}">
@@ -88,30 +85,26 @@
     </div>
     <!-- SCRIPTS -->
     <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
+      src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}"
     ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"
+      ></script>
     <script>
       $(window).on("load", function () {
         setTimeout(function () {
           $(".loader-page").css({ visibility: "hidden", opacity: "0" });
-        }, 500);
+        }, 1);
       });
     </script>
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
+      src="{{ url_for('static', filename='js/popper.min.js') }}"
     ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/googleapijquery.min.js') }}"
+      ></script>
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
+      src="{{ url_for('static', filename='js/bootstrap.min.js') }}"
     ></script>
-    <!-- Habilitar para hacer uso del efecto de nieve
-    <script src="../static/js/snowstorm.js"></script> -->
+     <!--Habilitar para hacer uso del efecto de nieve-->
+    <!--<script src="../static/js/snowstorm.js"></script>-->
   </body>
 </html>
